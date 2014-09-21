@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Siantra sso</title>
+
+    <link href="/baseadmin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/baseadmin/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <link href="/baseadmin/css/base-admin.css" rel="stylesheet" type="text/css">
+    <link href="/baseadmin/css/pages/signin.css" rel="stylesheet" type="text/css">
+    <link href="/base/css/common.min.css" rel="stylesheet" type="text/css" />
+  </head>
+
+<body>
+
+<!-- header -->
+
+<% unless flash.empty? %>
+<div class="container block" id="flash_message">
+  <div class="row">
+    <div class="span12">
+    <% for k, v in flash do %>
+      <div class="alert alert-<%=k%>"><%=v%></div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<% end %>
+ <!-- message -->
+
+
+<div class="account-container">
+
+  <div class="content clearfix">
+
+    <form action="" method="post">
+
+      <h1>登录</h1>
+
+      <div class="login-fields">
+
+        <p>请输入邮箱(或用户名)和密码</p>
+        <input type="hidden" id="production" name="production" value="<%=@production%>">
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" value="" placeholder="Email" class="login username-field" />
+        </div> <!-- /field -->
+
+        <div class="field">
+          <label for="password">密码:</label>
+          <input type="password" id="password" name="password" value="" placeholder="密码" class="login password-field"/>
+        </div> <!-- /password -->
+
+      </div> <!-- /login-fields -->
+
+      <div class="login-actions">
+
+        <button class="button btn btn-warning btn-large" type="submit">提交</button>
+
+      </div> <!-- .actions -->
+
+    </form>
+
+  </div> <!-- /content -->
+
+</div> <!-- /account-container -->
+
+<!--<script src="/baseadmin/js/signin.js"></script>-->
+
+<!-- javascript -->
+
+<div class="wrapFooter"><footer class="modal-footer" id="footer"><div class="container"><span>© 2012 pobing Inc. 保留所有权利 </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" target="_blank">服务条款</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" target="_blank">联系我们</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" target="_blank">商标权利</a>&nbsp;&nbsp;|&nbsp;&nbsp;</div></footer></div>
+
+</body>
+</html>

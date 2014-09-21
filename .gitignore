@@ -1,0 +1,14 @@
+.DS_Store
+logs/**/*
+tmp/**/*
+tmp
+bin/*
+vendor/gems/*
+!vendor/gems/cache/
+.sass-cache/*
+db/*.db
+.*.sw*
+.bundle
+dump.rdb
+.tags
+.tags_sorted_by_file
